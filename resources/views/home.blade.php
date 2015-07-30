@@ -20,7 +20,7 @@
             <div class="col-xs-offset-1 col-xs-10">
                 <p class="description text-left">
                     CurrencyShifts is a <u>free</u> JSON API that provides exchange rates for all <strong>118</strong> world currencies.
-                    The API is updated hourly and the data source is <a href="http://finance.yahoo.com">Yahoo Finance</a>.
+                    The API is updated hourly and the data source is <a href="http://finance.yahoo.com" target="_blank">Yahoo Finance</a>.
                 </p>
             </div>
         </div>
@@ -87,22 +87,26 @@
             <div class="row api-url">
                 You can also pass the <strong>base</strong> along with the symbols.
                 <br/>
-                <div class="api-url">
+                <div>
                     <p><strong class="get">GET</strong> <a href="{{url('api/v1/xrates?symbols=EUR,GBP,CHF&amount=10&base=BAM')}}">{{url('api/v1/xrates?symbols=EUR,GBP,CHF&amount=10&base=BAM')}}</a> <span class="text-muted show-response" v-on="click: toggle7">See Response <span class="caret"></span></span></p>
                     <div class="response" v-show="active7">
                         <pre><code id=seventh_response></code></pre>
                     </div>
                 </div>
             </div>
+
+            <div class="row api-url">
+                <a href="{{url('currencies')}}">List of supported currencies</a>
+                <hr/>
+            </div>
         </div>
     </div>
-    <br/>
+
     <div class="row text-left text-muted footer">
         <div class="col-xs-6 col-xs-offset-3">
-            The API is hosted on GitHub <br/>
-            We plan on going open-source soon <br/>
-            The uptime is monitored by <a href="http://uptimerobot.com">UptimeRobot</a> <br/>
-            We will work on, and update the API regularly
+            The API is hosted on <a href="https://github.com/SelimSalihovic/currencyshifts" target="_blank">GitHub</a> <br/>
+            The uptime is monitored by <a href="http://uptimerobot.com" target="_blank">UptimeRobot</a> <br/>
+            We will work on, and update the API frequently
         </div>
     </div>
 </div>
