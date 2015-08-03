@@ -24,8 +24,6 @@ $app = new Laravel\Lumen\Application(
  $app->configure('currencies');
  $app->configure('currencies-public');
 
- $app->register('App\Providers\CommandServiceProvider');
-
  $app->withEloquent();
 
 /*
@@ -48,10 +46,6 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
-
-$app->singleton('Config', function ($app) {
-    return new \CurrencyShifts\Config();
-});
 
 /*
 |--------------------------------------------------------------------------

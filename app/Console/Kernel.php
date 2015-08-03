@@ -4,12 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
-use App\Console\Commands\FirstBatch;
-use App\Console\Commands\SecondBatch;
-use App\Console\Commands\ThirdBatch;
-use App\Console\Commands\FourthBatch;
-use App\Console\Commands\FifthBatch;
 use App\Console\Commands\UpdateExchangeRates;
+use App\Console\Commands\Configure;
 
 class Kernel extends ConsoleKernel
 {
@@ -19,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        UpdateExchangeRates::class
+        UpdateExchangeRates::class,
+        Configure::class
     ];
 
     /**
@@ -30,6 +27,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('rates:update --force')->hourly();
+        $schedule->command('rates:update')->hourly()->sendOutputTo('log.txt');
     }
 }

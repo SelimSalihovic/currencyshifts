@@ -97,9 +97,9 @@ trait RetrievesExchangeRates
                 ExchangeRate::create((array)$exchange_rate);
                 if (Cache::has($exchange_rate->id)) {
                     Cache::forget($exchange_rate->id);
-                } else {
-                    Cache::forever($exchange_rate->id, $exchange_rate);
                 }
+
+                Cache::forever($exchange_rate->id, $exchange_rate);
             }
 
             $currencies = \Illuminate\Support\Facades\Config::get('currencies.config')['currencies'];

@@ -25,7 +25,7 @@ class ExchangeRatesProvider implements ExchangeRatesProviderInterface
     {
         $cache = $this->cacheProvider->getAllFromBase($base);
 
-        if (!empty($cache)) {
+        if (isset($cache['data']) && !empty($cache['data'])) {
             return $cache;
         } else {
             return $this->dbProvider->getAllFromBase($base);
@@ -43,7 +43,7 @@ class ExchangeRatesProvider implements ExchangeRatesProviderInterface
     {
         $cache = $this->cacheProvider->get($to, $amount, $base);
 
-        if (!empty($cache)) {
+        if (isset($cache['data']) && !empty($cache)) {
             return $cache;
         } else {
             return $this->dbProvider->get($to, $amount, $base);
@@ -61,7 +61,7 @@ class ExchangeRatesProvider implements ExchangeRatesProviderInterface
     {
         $cache = $this->cacheProvider->getFromSymbols($symbols, $base, $amount);
 
-        if (!empty($cache)) {
+        if (isset($cache['data']) && !empty($cache)) {
             return $cache;
         } else {
             return $this->dbProvider->getFromSymbols($symbols, $base, $amount);

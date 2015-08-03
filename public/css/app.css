@@ -6007,7 +6007,7 @@ body {
 
 @font-face {
   font-family: "Light";
-  src: url(../fonts/MYRIADPRO-REGULAR.woff); }
+  src: url(../../../fonts/MYRIADPRO-REGULAR.woff); }
 
 .api-wrap {
   background: #fff;
@@ -6030,13 +6030,38 @@ pre {
 
 .json-key {
   color: black;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .json-value {
   color: blue; }
 
 .json-string {
   color: green; }
+
+@media (min-width: 768px) {
+  .content {
+    margin-left: 122px !important; }
+  .footer {
+    margin-left: 105px !important; } }
+
+@media (max-width: 768px) {
+  .footer {
+    margin-left: 50px; } }
+
+@media (max-width: 360px) {
+  .footer {
+    margin-right: 50px; } }
+
+@media (min-width: 992px) {
+  .content {
+    margin-left: 205px !important; }
+  .footer {
+    margin-left: 190px !important; } }
+
+@media (min-width: 1200px) {
+  .content {
+    margin-left: 230px !important; }
+  .footer {
+    margin-left: 215px !important; } }
 
 /*# sourceMappingURL=app.css.map */

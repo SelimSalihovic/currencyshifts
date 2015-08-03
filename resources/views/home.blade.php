@@ -3,22 +3,23 @@
 <head>
     <title>CurrencyShifts</title>
     <link href="{{'css/app.css'}}" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
 <body>
-<div class="container text-center">
+<div class="container">
 
     <!-- start container -->
-    <div class="row">
-        <div class="title col-xs-8 col-xs-offset-2">
+    <div class="row text-center">
+        <div class="title col-lg-10 col-lg-offset-1 col-md-10 col-xs-offset-1">
             <h1>CurrencyShifts</h1>
             <h3> <span class="json">JSON</span> API for exchange rates and currency conversion</h3>
-            <p class="text-center">
+            <p>
                 <img src="{{'img/currencyshifts.png'}}" width="150" alt=""/>
             </p>
             <br/>
 
             <div class="col-xs-offset-1 col-xs-10">
-                <p class="description text-left">
+                <p class="description text-center">
                     CurrencyShifts is a <u>free</u> JSON API that provides exchange rates for all <strong>118</strong> world currencies.
                     The API is updated hourly and the data source is <a href="http://finance.yahoo.com" target="_blank">Yahoo Finance</a>.
                 </p>
@@ -26,7 +27,7 @@
         </div>
     </div>
     <div class="row" id="app">
-        <div class="content col-xs-6 col-xs-offset-3 text-left">
+        <div class="content col-lg-8 col-lg-offset-1 col-md-10 col-xs-offset-1 text-left">
             <div class="row">
                 <h2 class="text-left">Usage</h2>
                 <hr/>
@@ -102,15 +103,12 @@
         </div>
     </div>
 
-    <div class="row text-left text-muted footer">
-        <div class="col-xs-6 col-xs-offset-3">
-            The API is hosted on <a href="https://github.com/SelimSalihovic/currencyshifts" target="_blank">GitHub</a> <br/>
-            The uptime is monitored by <a href="http://uptimerobot.com" target="_blank">UptimeRobot</a> <br/>
-            We will work on, and update the API frequently
-        </div>
+    <div class="row text-muted footer">
+        The API is hosted on <a href="https://github.com/SelimSalihovic/currencyshifts" target="_blank">GitHub</a> <br/>
+        The uptime is monitored by <a href="http://uptimerobot.com" target="_blank">UptimeRobot</a> <br/>
+        We will work on, and update the API frequently
     </div>
 </div>
-
 
 <!-- end container -->
 <script>

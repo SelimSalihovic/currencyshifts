@@ -3,27 +3,23 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Console\Commands\RetrievesExchangeRates;
-use App\Currency;
+use CurrencyShifts\Config;
 
-class UpdateExchangeRates extends Command
+class Configure extends Command
 {
-
-    use RetrievesExchangeRates;
-
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'rates:update';
+    protected $signature = 'rates:configure';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Updates the exchange rates from Yahoo Finance';
+    protected $description = 'Sets everything up for use';
 
     /**
      * Create a new command instance.
@@ -42,13 +38,7 @@ class UpdateExchangeRates extends Command
      */
     public function handle()
     {
-        $this->retrieve(1);
-        $this->retrieve(2, 3250);
-        $this->retrieve(3, 6500);
-        $this->retrieve(4, 9750);
-        $this->finalize();
-
-        return $this->info('Exchange Rates Updated!');
-
+        new Config();
+        $this->info('Configuration complete.');
     }
 }

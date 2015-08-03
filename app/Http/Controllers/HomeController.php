@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ExampleResponseProvider;
+use CurrencyShifts\Config;
 
 class HomeController extends Controller
 {
